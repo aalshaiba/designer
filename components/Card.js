@@ -1,20 +1,17 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 
-const Card = (props) => (
+const Card = ({ title, image, logo, caption, subtitle }) => (
   <View style={styles.container}>
     <View style={styles.cover}>
-      <Image
-        source={require("../assets/background2.jpg")}
-        style={styles.image}
-      />
-      <Text style={styles.title}>Styled Component</Text>
+      <Image source={image} style={styles.image} />
+      <Text style={styles.title}>{title}</Text>
     </View>
     <View style={styles.content}>
-      <Image source={require("../assets/logo-react.png")} style={styles.logo} />
+      <Image source={logo} style={styles.logo} />
       <View style={styles.wrapper}>
-        <Text style={styles.caption}>React Native</Text>
-        <Text style={styles.subTitle}>5 of 12 sections</Text>
+        <Text style={styles.caption}>{caption}</Text>
+        <Text style={styles.subTitle}>{subtitle}</Text>
       </View>
     </View>
   </View>
